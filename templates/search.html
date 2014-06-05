@@ -1,0 +1,18 @@
+<section>
+    <h5>Search criteria:</h5>
+    <form method="POST">
+        <input type="text" value="{{ q }}" id="q" name="q" />
+        <input type="submit" value="Search" />
+    </form>
+</section>
+
+{% if results %}
+<section>
+    <h5>Search results:</h5>
+    <ul>
+        {% for result in results %}
+            <li>{{result}}</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
